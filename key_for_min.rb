@@ -1,10 +1,9 @@
 # prereqs: iterators, hashes, conditional logic
 # Given a hash with numeric values, return the key for the smallest value
-
+myHash = {:blake => 500, :ashley => 2, :adam => 1}
 def key_for_min_value(name_hash)
-  valuesToSort = []
-  name_hash.each do |key, value|
-     valuesToSort.push(value)
+  if name_hash.length == 0
+    return nil
   end
   sorted = mySort(name_hash)
   key = getKeys(sorted)
@@ -57,3 +56,4 @@ def mySort(hash)
     end
   return sortedHash
 end
+key_for_min_value(myHash)
